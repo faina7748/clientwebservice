@@ -7,7 +7,7 @@ $result = $client->request('GET', 'http://localhost/webservice/sakila/film_svc.p
 //var_dump($response->getBody()->getContents());
 $films = json_decode($result->getBody()->getContents());
 
-echo "<h3>My Favourite Film List</h3>";
+echo "<h3><img src='img/film.jpg' width='50' height='50'>My Favourite Film List</h3>";
 echo '<table border=1 cellpadding=0 cellspacing=0>';
 echo '<tr bgcolor="#ff99dd"><td>No</td><td>Title</title><td>Description</td>';
 foreach ($films as $key => $film) {	
