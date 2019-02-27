@@ -22,25 +22,21 @@ if(isset($_POST['id'])){
 	//var_dump($response->getBody()->getContents());
 	$film = json_decode($result->getBody()->getContents());
 
-	/*if($token==''){
-		echo $film->err;
-	}else{*/
-		echo "<h3><img src='img/film.jpg' width='50' height='50'>My Favourite Film Info</h3>";
-		echo '<table border=1 cellpadding=0 cellspacing=0>';
-		echo '<tr bgcolor="#ff99dd"><td>No</td><td>Title</title><td>Description</td><td>Language</td><td>Show</td>';	
- 
-		if(isset($film->err)){
-			echo '<tr><td colspan="5">'.$film->err.'</td></tr>';
-		}else{		
-			echo '<tr>';
-			echo '<td align="center">1.</td>';
-			echo '<td>'.$film->title.'</td>';
-			echo '<td>'.$film->description.'</td>';
-			echo '<td align="center">'.$film->name.'</td>';
-			echo '<td align="center"><a href="img/smile.jpg" target=_blank><img src="img/movie.png" height="20" width="20"></a></td>';		
-		}
+	echo "<h3><img src='img/film.jpg' width='50' height='50'>My Favourite Film Info</h3>";
+	echo '<table border=1 cellpadding=0 cellspacing=0>';
+	echo '<tr bgcolor="#ff99dd"><td>No</td><td>Title</title><td>Description</td><td>Language</td><td>Show</td>';	
 
-		echo '</tr>';		
-		echo '</table>';
-	//}
+	if(isset($film->err)){
+		echo '<tr><td colspan="5">'.$film->err.'</td></tr>';
+	}else{		
+		echo '<tr>';
+		echo '<td align="center">1.</td>';
+		echo '<td>'.$film->title.'</td>';
+		echo '<td>'.$film->description.'</td>';
+		echo '<td align="center">'.$film->name.'</td>';
+		echo '<td align="center"><a href="img/smile.jpg" target=_blank><img src="img/movie.png" height="20" width="20"></a></td>';		
+	}
+
+	echo '</tr>';		
+	echo '</table>';
 }
