@@ -28,7 +28,7 @@ if(isset($_POST['id'])){
 		echo "<h3><img src='img/film.jpg' width='50' height='50'>My Favourite Film Info</h3>";
 		echo '<table border=1 cellpadding=0 cellspacing=0>';
 		echo '<tr bgcolor="#ff99dd"><td>No</td><td>Title</title><td>Description</td><td>Language</td><td>Show</td>';	
-
+ 
 		if(isset($film->err)){
 			echo '<tr><td colspan="5">'.$film->err.'</td></tr>';
 		}else{		
